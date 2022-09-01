@@ -1,14 +1,12 @@
 .container{
-    display: flex;           /* establish flex container */
-    flex-direction: row;  /* make main axis horizontal, CHANGE HERE REST IS SAME */
-    justify-content: center; /* center items vertically, in this case */
-    align-items: center;     /* center items horizontally, in this case */
+    display: flex;   
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    height: 40vh;     
 }
 .item{
     order: 3;
-}
-.header{
-    height: 40vh;
 }
 .title {
     color: black;
@@ -21,21 +19,30 @@
     margin-left: 6px;
 }
 .myimage{
-    width: 10%;
+    width: 100%;
+    max-width: 130px;
     border-radius: 50%;
     margin-left: 30px;
+}
+.myimage img{
+    border-radius: 50%;
+    min-width: 80px;
+    max-width: 130px;
+    width: 100%;
 }
 .project_container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 .project_card{
     box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
     width: 23%;
     margin: 2.5%;
     border-radius: 4px;
+    min-width: 360px;
 }
 .project_title{
     font-size: 18px;
@@ -44,7 +51,7 @@
 }
 .project_desc{
     color: grey;
-    font-size: 13px;
+    font-size: 12px;
     margin: 12px;
 }
 .links{
@@ -71,4 +78,22 @@ hr{
 }
 body{
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+@media(max-width:720px){
+    .title{
+        font-size: 48px;
+    }
+    .container{
+        flex-direction: column;
+        height: 30vh;
+    }
+    .myimage{
+        margin-left: 0px;
+    }
+    .container div:first-child{
+        order: 2;
+    }
 }
