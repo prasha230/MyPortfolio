@@ -19,6 +19,7 @@
     color: grey;
     font-size: 14px;
     margin-left: 6px;
+    text-align: right;
 }
 .myimage{
     width: 100%;
@@ -118,5 +119,8 @@ body{
     .projects_heading{
         font-size:24px;
         margin-bottom: 10px;
+    }
+    .desc{
+        text-align: center;
     }
 }
